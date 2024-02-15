@@ -1,5 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox-viem";
+import "@nomicfoundation/hardhat-chai-matchers";
 import { config as dotenvConfig } from "dotenv";
 import { resolve } from "path";
 
