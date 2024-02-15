@@ -21,7 +21,7 @@ export const depolyDiamond = async () => {
         'DiamondLoupeFacet',
         'OwnershipFacet',
         'ERC721Facet',
-        'TestFacet'
+        'MintFacet'
     ];
     const cut = [];
 

@@ -6,7 +6,8 @@ import { shouldBehaveLikeERC721 } from "./erc721.behavior";
 const fixture = async () => {
     return {
         publicClient: await hre.viem.getPublicClient(),
-        walletClients: await hre.viem.getWalletClients(),
+        walletClient: (await hre.viem.getWalletClients())[0],
+        accounts: (await hre.viem.getWalletClients()).map((client) => client.account),
         contractAddress: await depolyDiamond()
     }
 }

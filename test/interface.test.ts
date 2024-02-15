@@ -41,7 +41,7 @@ export const shouldSupportInterface = async (interfaces: string[] = []) => {
                             abi: this.contract.abi,
                             functionName: "supportsInterface",
                             args: [getInterfaceId(funcs)],
-                            account: this.owner.account.address
+                            account: this.owner.address
                         });
                         expect(gas).to.lte(30_000n);
                     }
@@ -71,7 +71,7 @@ export const shouldSupportInterface = async (interfaces: string[] = []) => {
                     abi: this.contract.abi,
                     functionName: "supportsInterface",
                     args: [INVALID_ID],
-                    account: this.owner.account.address
+                    account: this.owner.address
                 });
                 expect(gas).to.lte(30_000n);
             });
