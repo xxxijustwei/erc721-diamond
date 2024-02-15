@@ -60,5 +60,3 @@ export const depolyDiamond = async () => {
 
     return diamond.address;
 }
-
-depolyDiamond().then(console.log);
